@@ -6,9 +6,22 @@ public class Leap
     {
         this.year=year;
     }
+    public Leap(float year)
+    {
+        this.year=(int)year;
+    }
+    public Leap(double year)
+    {
+        this.year=(int)year;
+    }
+    public Leap(String year)
+    {
+        this.year = Convert.ToInt32(year);
+    }
     public bool isLeapYear()
     {
-        if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year!=0)
+        
+        if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year>=1582)
         { 
             setLeap();
             return true;
@@ -16,7 +29,7 @@ public class Leap
     }
     public bool isLeapYear(int year)
     {
-        if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year!=0)
+        if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year>=1582)
         { 
             setLeap();
             return true;
