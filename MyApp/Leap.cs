@@ -14,6 +14,7 @@ public class Leap
             return true;
         } else return false; 
     }
+
     public bool isLeapYear(int year)
     {
         if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year!=0)
@@ -41,6 +42,5 @@ public class Leap
             Console.WriteLine("nay");
             return false;
         }
-    }
-    
+    }    
 }
