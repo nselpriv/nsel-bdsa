@@ -6,6 +6,7 @@ public class Leap
     {
         this.year=year;
     }
+<<<<<<< HEAD
     public Leap(float year)
     {
         this.year=(int)year;
@@ -22,14 +23,26 @@ public class Leap
     {
         
         if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year>=1582)
+=======
+    public bool isLeapYear()
+    {
+        if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year!=0)
+>>>>>>> e60d2e55cc2ae09d95f3e420a3eb47f4a9078812
         { 
             setLeap();
             return true;
         } else return false; 
     }
+<<<<<<< HEAD
     public bool isLeapYear(int year)
     {
         if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year>=1582)
+=======
+
+    public bool isLeapYear(int year)
+    {
+        if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year!=0)
+>>>>>>> e60d2e55cc2ae09d95f3e420a3eb47f4a9078812
         { 
             setLeap();
             return true;
@@ -54,6 +67,10 @@ public class Leap
             Console.WriteLine("nay");
             return false;
         }
+<<<<<<< HEAD
     }
     
+=======
+    }    
+>>>>>>> e60d2e55cc2ae09d95f3e420a3eb47f4a9078812
 }
