@@ -17,6 +17,7 @@ public class isLeapTest
         var test9 = new Leap(1424123.5454054);
         var test10 = new Leap("4000");
         
+
          // Act
        test1.isLeapYear();
        test2.isLeapYear();
@@ -29,6 +30,7 @@ public class isLeapTest
        test9.isLeapYear();
        test10.isLeapYear();
 
+
         // Assert
         test1.isLeap.Should().Be(false);
         test2.isLeap.Should().Be(false);
@@ -40,5 +42,7 @@ public class isLeapTest
         test8.isLeap.Should().Be(true);
         test9.isLeap.Should().Be(false);
         test10.isLeap.Should().Be(true);
+        test3.isLeap.Should().Be(true);
+        test4.isLeap.Should().Be(true);
     }
 }

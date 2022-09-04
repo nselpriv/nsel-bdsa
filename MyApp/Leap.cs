@@ -22,6 +22,10 @@ public class Leap
     {
         
         if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year>=1582)
+
+    public bool isLeapYear()
+    {
+        if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year!=0)
         { 
             setLeap();
             return true;
@@ -30,6 +34,11 @@ public class Leap
     public bool isLeapYear(int year)
     {
         if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year>=1582)
+
+
+    public bool isLeapYear(int year)
+    {
+        if(year%4 == 0 && (year%100 != 0 || year%400 == 0) && year!=0)
         { 
             setLeap();
             return true;
@@ -56,4 +65,6 @@ public class Leap
         }
     }
     
+
+    }    
 }
