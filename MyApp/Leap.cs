@@ -2,10 +2,11 @@ public class Leap
 {
     private int year;
     public bool isLeap;
-    public Leap(int year)
-    {
-        this.year=year;
-    }
+
+        public Leap(int year)
+        {
+            this.year=year;
+        }
     public Leap(float year)
     {
         this.year=(int)year;
@@ -16,7 +17,13 @@ public class Leap
     }
     public Leap(String year)
     {
+        try 
+        {
         this.year = Convert.ToInt32(year);
+        } catch (Exception e)
+        {
+            Console.WriteLine(year + " is a bad input, only use numbers please error:" + e.Message);
+        } 
     }
     public bool isLeapYear()
     {
@@ -39,7 +46,7 @@ public class Leap
     {
         isLeap=true;
     }
-    public bool userInputCheck()
+    public bool userInputCheck(int testnumber)
     {
 
         Console.Write("Enter year for Leapyear check!: ");
@@ -55,5 +62,9 @@ public class Leap
             return false;
         }
     }
-    
+    public void testException()
+    {
+        throw new ArgumentException("You must supply an argument");
+        
+    }
 }
